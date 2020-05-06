@@ -129,8 +129,9 @@ surfaceExtended <- function(bwd_surface, data, tree, error = NA, models = c('OUM
   data_surface <- surface::convertTreeData(tree, data)
 
   ###Set up summary of results
+  num_models = length(all_regimes)*length(models)
   summary <- data.frame(model = paste(rep(all_regimes, each = length(models)), models, sep = '_'),
-                       worked = rep(F, length(all_regimes)*2), AICC = rep(NA, length(all_regimes)*2))
+                       worked = rep(F, num_models), AICC = rep(NA, num_models))
 
   while(number_of_regimes >= limit) {
 
