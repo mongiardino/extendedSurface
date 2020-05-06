@@ -1,0 +1,34 @@
+Package: extendedSurface
+Type: Package
+Title: Fit Complex Multi-OU Models by Extending SURFACE and Providing an Interface with OUwie
+Version: 0.1.0
+Authors@R: person("Nicolas", "Mongiardino Koch", email = "mongiar@hotmail.com", role = c("aut", "cre"))
+Description: Multi Ornstein Uhlenbeck (OUM) models are routinely employed to 
+    describe the phenotypic evolution of clades across a macroevolutionary adaptive 
+    landscape. Multiple implementations exist, including those that require an a 
+    priori assigment of lineages to adaptive regimes (e.g., OUwie), and those that 
+    infer the location of such regimes shifts (e.g., SURFACE). However, SURFACE 
+    has been found to favor overly complex models, which is likely a consequence 
+    of fixing a single rate of evolution and force of attraction for the entire 
+    tree. Although these parameters can be optimized for each regime by using the 
+    SURFACE output as the set of regime shifts required by OUwie, such complex 
+    models often fail to be optimized. extendedSurface provides a solution by
+    continuing the backwards phase of SURFACE, merging regimes and generating 
+    simpler (yet suboptimal) multiOU models. These are then fed to OUwie, where 
+    parameters for each regime can be independetly optimized. Using simpler 
+    OUM models as starting points improves the probability of successful model 
+    fitting. The resulting models are more realistic, and have been found to be 
+    favored over others using empirical comparative datasets. The package allows 
+    the user to decide which models should be fit (OUMA, OUMV, OUMVA, with and 
+    without stationary root state), and plots the fit of these against those 
+    explored by SURFACE to easily compare model fit.
+BugReports: https://github.com/mongiardino/extendedSurface/issues
+License: GPL (>= 2)
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    OUwie (>= 1.53),
+    surface (>= 0.4.1),
+    phytools (>= 0.6.99),
+    ape (>= 5.3)
+RoxygenNote: 7.1.0

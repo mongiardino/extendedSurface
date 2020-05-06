@@ -1,0 +1,17 @@
+citHeader("To cite extendedSurface in publications use:")
+
+citEntry(entry = "Article",
+  title        = "A Total-Evidence Dated Phylogeny of Echinoids and the Evolution of Body Size across Adaptive Landscape",
+  author       = personList(as.person("Nicolás Mongiardino Koch"),
+                   as.person("Jeffrey R. Thompson")),
+  journal      = "bioRxiv",
+  year         = "2020",
+  volume       = "2020.02.13.947796",
+  url          = "https://doi.org/10.1101/2020.02.13.947796",
+
+  textVersion  =
+  paste("Nicolás Mongiardino Koch, Jeffrey R Thompson (2020).",
+        "A Total-Evidence Dated Phylogeny of Echinoids and the Evolution of Body Size across Adaptive Landscape.",
+        "bioRxiv, 2020.02.13.947796.",
+        "URL https://doi.org/10.1101/2020.02.13.947796")
+)
