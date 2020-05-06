@@ -4,16 +4,8 @@
 \alias{surfaceExtended}
 \title{Interface between SURFACE and OUwie to fit complex multi-OU models}
 \usage{
-surfaceExtended(
-  bwd_surface,
-  data,
-  tree,
-  error = NA,
-  models = c("OUMVA", "OUMVAZ"),
-  limit = 2,
-  plot = T,
-  fwd_surface = NA
-)
+surfaceExtended(bwd_surface, data, tree, error = NA, models = c("OUMVA", "OUMVAZ"),
+  limit = 2, plot = T, fwd_surface = NA)
 }
 \arguments{
 \item{bwd_surface}{List of models obtained using the backwards phase of
