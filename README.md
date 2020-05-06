@@ -8,7 +8,7 @@ devtools::install_github("mongiardino/extendedSurface")
 ```
 
 ## Description
-Multi Ornstein-Uhlenbeck (OUM) models are used to model the evolution of traits across a macroevolutionary adaptive landscapes. Many approaches exist to fit the types of models, but they generally suffer from one of several shortcomings:
+Multi Ornstein-Uhlenbeck (OUM) models are used to model the evolution of traits across a macroevolutionary adaptive landscape. Many approaches exist to fit the types of models, but they generally suffer from one of several shortcomings:
  1) They only work on ultrametric trees, even when paleontological data has been shown to improve accuracy of OU models (Ho & Ané 2014).
  2) They require *a priori* hypotheses on the number and location of regimes shifts (Beaulieau et al. 2012).
  3) They favor overly complex models (i.e., too many adaptive peaks; Khabbazian et al. 2016).
