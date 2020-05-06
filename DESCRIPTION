@@ -22,6 +22,7 @@ Description: Multi Ornstein Uhlenbeck (OUM) models are routinely employed to
     the user to decide which models should be fit (OUMA, OUMV, OUMVA, with and 
     without stationary root state), and plots the fit of these against those 
     explored by SURFACE to easily compare model fit.
+URL: http://github.com/mongiardino/extendedSurface
 BugReports: https://github.com/mongiardino/extendedSurface/issues
 License: GPL (>= 2)
 Encoding: UTF-8
