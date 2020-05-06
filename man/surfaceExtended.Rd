@@ -4,8 +4,16 @@
 \alias{surfaceExtended}
 \title{Interface between SURFACE and OUwie to fit complex multi-OU models}
 \usage{
-surfaceExtended(bwd_surface, data, tree, error = NA, models = c("OUMVA", "OUMVAZ"),
-  limit = 2, plot = T, fwd_surface = NA)
+surfaceExtended(
+  bwd_surface,
+  data,
+  tree,
+  error = NA,
+  models = c("OUMVA", "OUMVAZ"),
+  limit = 2,
+  plot = T,
+  fwd_surface = NA
+)
 }
 \arguments{
 \item{bwd_surface}{List of models obtained using the backwards phase of
@@ -111,16 +119,11 @@ complexity (number of regimes) of the starting model.
 
 }
 \references{
- Beaulieu J.M., Jhuwueng D.‐C., Boettiger C., O'Meara B.C. 2012. Modeling stabilizing selection: expanding the Ornstein–Uhlenbeck model of adaptive evolution. Evolution, 66:2369–2383.
-
+Beaulieu J.M., Jhuwueng D.‐C., Boettiger C., O'Meara B.C. 2012. Modeling stabilizing selection: expanding the Ornstein–Uhlenbeck model of adaptive evolution. Evolution, 66:2369–2383.
  Benson R.B.J., Hunt G., Carrano M.T., Campione N. (2018), Cope's rule and the adaptive landscape of dinosaur body size evolution. Palaeontology, 61:13-48.
-
  Ho L.S.T, Ané C. 2014. Intrinsic inference difficulties for trait evolution with Ornstein‐Uhlenbeck models. Methods in Ecology & Evolution, 5:1133–1146.
-
  Ingram T., Mahler D.L. 2013. SURFACE: detecting convergent evolution from comparative data by fitting Ornstein‐Uhlenbeck models with stepwise Akaike Information Criterion. Methods in Ecology & Evolution, 4:416–425.
-
  Khabbazian M., Kriebel R., Rohe K., Ané, C. 2016. Fast and accurate detection of evolutionary shifts in Ornstein‐Uhlenbeck models. Methods in Ecology & Evolution, 7:811–824.
-
  Mongiardino Koch N., Thompson J.R. A Total-Evidence Dated Phylogeny of Echinoids and the Evolution of Body Size across Adaptive Landscape. bioRxiv 2020.02.13.947796, doi.org/10.1101/2020.02.13.947796.
 }
 \seealso{
