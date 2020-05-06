@@ -23,7 +23,7 @@ extendedSurface provides an easy interface between surface and OUwie, so that pa
 ## Usage
 The package comes with exemplary data that includes a time-calibrated phylogeny of echinoids, body size and measurement errors for all tips, as well as the outputs of running the forward and backwards phases of Surface on this data.
 ```R
-invisible(echinoid_data)
+data(echinoid_data)
 surfaceExtended(bwd_surface = echinoid_data$bwd_surface,
                 data = echinoid_data$size,
                 tree = echinoid_data$tree,

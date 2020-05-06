@@ -94,7 +94,7 @@
 #' @export
 #' @examples
 #'  \dontrun{
-#'   invisible(echinoid_data)
+#'   data(echinoid_data)
 #'   surfaceExtended(bwd_surface = echinoid_data$bwd_surface, data =
 #'   echinoid_data$size, tree = echinoid_data$tree, error = echinoid_data$error,
 #'   models = 'OUMVAZ', limit = 4, plot = T, fwd_surface =

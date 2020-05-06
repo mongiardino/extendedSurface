@@ -20,7 +20,7 @@ A list with all the data to replicate the macroevolutionary analysis
 echinoid_data
 }
 \description{
-A list containing a data.set of body sizes, a vector of measurement errors, a
+A list containing a dataset of body sizes, a vector of measurement errors, a
 time-calibrated phylogeny, and the results of running forward and backward
 phases of SURFACE on this dataset.
 }
