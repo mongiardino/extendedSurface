@@ -103,10 +103,10 @@ complexity (number of regimes) of the starting model.
 \examples{
  \dontrun{
   invisible(echinoid_data)
-  surfaceExtended(bwd_surface = echinoid_data$bwd_surface, data =
-  echinoid_data$size, tree = echinoid_data$tree, error = echinoid_data$error,
-  models = 'OUMVAZ', limit = 4, plot = T, fwd_surface =
-  echinoid_data$fwd_surface)
+  OUmodels <- surfaceExtended(bwd_surface = echinoid_data$bwd_surface, data =
+   echinoid_data$size, tree = echinoid_data$tree, error = echinoid_data$error,
+   models = 'OUMVAZ', limit = 4, plot = T, fwd_surface =
+   echinoid_data$fwd_surface)
  }
 
 }
