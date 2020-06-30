@@ -64,15 +64,17 @@ extended_surfaceAICPlot <- function(ext_surface, summary, fwd_surface = NA) {
   points(nreg[which(model_type == 'OUM')], aics[which(model_type == 'OUM')], pch = 21, bg = 'black', cex = 1.5)
 
   for(i in min(nreg[which(model_type != 'OUM')]):max(nreg[which(model_type != 'OUM')])) {
-    to_connect_y <- c(aics[which(model_type != 'OUM' & nreg == i)],
-                     min(aics[which(nreg[which(model_type == 'OUM')] == i)]))
-    to_connect_x <- rep(i, 2)
+    if(any(model_type != 'OUM' & nreg == i)) {
+      to_connect_y <- c(aics[which(model_type != 'OUM' & nreg == i)],
+                        min(aics[which(nreg[which(model_type == 'OUM')] == i)]))
+      to_connect_x <- rep(i, 2)
 
-    points(to_connect_x, range(to_connect_y), type = 'l', lwd = 1)
+      points(to_connect_x, range(to_connect_y), type = 'l', lwd = 1)
 
-    for(j in 1:(length(to_connect_y)-1)) {
-      k <- which(unique(model_type) == model_type[model_type != 'OUM' & nreg == i][j])-1
-      points(i, to_connect_y[j], pch = pch[k], col = col[k], bg = bg[k], cex = 1.5)
+      for(j in 1:(length(to_connect_y)-1)) {
+        k <- which(unique(model_type) == model_type[model_type != 'OUM' & nreg == i][j])-1
+        points(i, to_connect_y[j], pch = pch[k], col = col[k], bg = bg[k], cex = 1.5)
+      }
     }
   }
 
