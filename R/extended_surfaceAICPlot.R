@@ -66,7 +66,7 @@ extended_surfaceAICPlot <- function(ext_surface, summary, fwd_surface = NA) {
   for(i in min(nreg[which(model_type != 'OUM')]):max(nreg[which(model_type != 'OUM')])) {
     if(any(model_type != 'OUM' & nreg == i)) {
       to_connect_y <- c(aics[which(model_type != 'OUM' & nreg == i)],
-                        min(aics[which(nreg[which(model_type == 'OUM')] == i)]))
+                        (aics[which(nreg[which(model_type == 'OUM')] == i)])[2])
       to_connect_x <- rep(i, 2)
 
       points(to_connect_x, range(to_connect_y), type = 'l', lwd = 1)
