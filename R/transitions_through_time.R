@@ -164,11 +164,7 @@ transitions_through_time <- function(tree, char, repl = 100, model = 'ER', plot 
   }
 
   #plot and return data
-<<<<<<< HEAD
   if(plot) plot_ttt(ttt = all_data, interval = NA, window_size = NA, CI = 80, trim = T,
                     graphs = 'both', rates = 'diversification', k = NA)
-=======
-  if(plot) plot_ttt(ttt = all_data)
->>>>>>> 96ba4c130a81d21b5bc733113d5281e9cc7e181f
   return(all_data)
 }

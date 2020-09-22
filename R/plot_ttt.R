@@ -287,11 +287,7 @@ plot_ttt <- function(ttt, interval = NA, window_size = NA, CI = 80, trim = T,
   }
 
   if(active_regimes & rate_ttt) {
-<<<<<<< HEAD
     print(plot_grid(plotA, plotB, ncol = 1, align = "v"))
-=======
-    plot_grid(plotA, plotB, ncol = 1, align = "v")
->>>>>>> 96ba4c130a81d21b5bc733113d5281e9cc7e181f
   } else {
     if(exists('plotA')) {
       plot(plotA)
