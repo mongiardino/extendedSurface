@@ -89,8 +89,10 @@
 #'  Ingram T., Mahler D.L. 2013. SURFACE: detecting convergent evolution from comparative data by fitting Ornstein‐Uhlenbeck models with stepwise Akaike Information Criterion. Methods in Ecology & Evolution, 4:416–425.
 #'  Khabbazian M., Kriebel R., Rohe K., Ané, C. 2016. Fast and accurate detection of evolutionary shifts in Ornstein‐Uhlenbeck models. Methods in Ecology & Evolution, 7:811–824.
 #'  Mongiardino Koch N., Thompson J.R. A Total-Evidence Dated Phylogeny of Echinoids and the Evolution of Body Size across Adaptive Landscape. bioRxiv 2020.02.13.947796, doi.org/10.1101/2020.02.13.947796.
-#' @seealso For details on how these models are fit visit \code{\link[surface]{surfaceBackward}} and \code{\link[OUwie]{OUwie}}.
-#'   Plots of AIC values can be obtained with \code{\link{extended_surfaceAICPlot}}
+#' @seealso For details on how these models are fit visit
+#'   \code{\link[surface]{surfaceBackward}} and \code{\link[OUwie]{OUwie}}.
+#'   Plots of AIC values can be obtained with
+#'   \code{\link{extended_surfaceAICPlot}}
 #' @export
 #' @examples
 #'  \dontrun{

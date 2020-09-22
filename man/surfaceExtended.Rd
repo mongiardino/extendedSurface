@@ -4,8 +4,16 @@
 \alias{surfaceExtended}
 \title{Interface between SURFACE and OUwie to fit complex multi-OU models}
 \usage{
-surfaceExtended(bwd_surface, data, tree, error = NA, models = c("OUMVA", "OUMVAZ"),
-  limit = 2, plot = T, fwd_surface = NA)
+surfaceExtended(
+  bwd_surface,
+  data,
+  tree,
+  error = NA,
+  models = c("OUMVA", "OUMVAZ"),
+  limit = 2,
+  plot = T,
+  fwd_surface = NA
+)
 }
 \arguments{
 \item{bwd_surface}{List of models obtained using the backwards phase of
@@ -102,7 +110,7 @@ complexity (number of regimes) of the starting model.
 }
 \examples{
  \dontrun{
-  invisible(echinoid_data)
+  data(echinoid_data)
   OUmodels <- surfaceExtended(bwd_surface = echinoid_data$bwd_surface, data =
    echinoid_data$size, tree = echinoid_data$tree, error = echinoid_data$error,
    models = 'OUMVAZ', limit = 4, plot = T, fwd_surface =
@@ -119,8 +127,10 @@ Beaulieu J.M., Jhuwueng D.‐C., Boettiger C., O'Meara B.C. 2012. Modeling stabi
  Mongiardino Koch N., Thompson J.R. A Total-Evidence Dated Phylogeny of Echinoids and the Evolution of Body Size across Adaptive Landscape. bioRxiv 2020.02.13.947796, doi.org/10.1101/2020.02.13.947796.
 }
 \seealso{
-For details on how these models are fit visit \code{\link[surface]{surfaceBackward}} and \code{\link[OUwie]{OUwie}}.
-  Plots of AIC values can be obtained with \code{\link{extended_surfaceAICPlot}}
+For details on how these models are fit visit
+  \code{\link[surface]{surfaceBackward}} and \code{\link[OUwie]{OUwie}}.
+  Plots of AIC values can be obtained with
+  \code{\link{extended_surfaceAICPlot}}
 }
 \author{
 Nicolás Mongiardino Koch
