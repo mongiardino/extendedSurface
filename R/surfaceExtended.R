@@ -216,8 +216,13 @@ surfaceExtended <- function(bwd_surface, data, tree, error = NA, models = c('OUM
     } else {
       assign(paste0('best_', models[i]),
              get(as.character(model_results[which(model_results[,'AICC'] == min(model_results[,'AICC'])),'model'])))
-      cat('For', models[i], 'a', nrow(get(paste0('best_', models[i]))$theta),
-          'regime solution was the best, with AICc =', get(paste0('best_', models[i]))$AICc, '\n')
+      if(grepl(models[i], 'Z')) {
+        cat('For', models[i], 'a', (nrow(get(paste0('best_', models[i]))$theta)-1),
+            'regime solution was the best, with AICc =', get(paste0('best_', models[i]))$AICc, '\n')
+      } else {
+        cat('For', models[i], 'a', nrow(get(paste0('best_', models[i]))$theta),
+            'regime solution was the best, with AICc =', get(paste0('best_', models[i]))$AICc, '\n')
+      }
       if(exists('to_output')) {
         to_output <- c(to_output, paste0('best_', models[i]))
       } else {
