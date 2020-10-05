@@ -115,7 +115,7 @@ surfaceExtended <- function(bwd_surface, data, tree, error = NA, models = c('OUM
   ###Models
   if(models[1] == 'all') models <- c('OUMA', 'OUMAZ', 'OUMV', 'OUMVZ', 'OUMVA', 'OUMVAZ')
   if(models[1] == 'all_noZ') models <- c('OUMA', 'OUMV', 'OUMVA')
-  root.station <- !grepl('Z', models)
+  estimate.theta <- grepl('Z', models)
 
   ###Data
   if(class(data) != 'data.frame') data <- data.frame(data)
@@ -190,8 +190,9 @@ surfaceExtended <- function(bwd_surface, data, tree, error = NA, models = c('OUM
     #Fit models with OUwie and make summary of results
     for(i in 1:length(models)) {
       ouwie_result <- OUwie::OUwie(tree_ouwie, data_ouwie, model = gsub('Z', '', models[i]), simmap.tree = F,
-                                   root.age = tree_ouwie$root.time, scaleHeight = F, root.station = root.station[i],
-                                   clade = NULL, mserr = mserr, starting.vals = NULL, diagn = T, warn = F)
+                                   root.age = tree_ouwie$root.time, scaleHeight = F, root.station = F,
+                                   get.root.theta = estimate.theta[i], clade = NULL, mserr = mserr,
+                                   starting.vals = NULL, diagn = T, warn = F)
 
       model_name <- paste(number_of_regimes, models[i], sep = '_')
       assign(model_name, ouwie_result)
