@@ -6,6 +6,7 @@ extendedSurface is an approach to fitting complex multi Ornstein-Uhlenbeck model
 install.packages("devtools")
 devtools::install_github("mongiardino/extendedSurface")
 ```
+Note that SURFACE has been removed from CRAN and needs to be manually installed from this [file](https://cran.r-project.org/src/contrib/Archive/surface/surface_0.4-1.tar.gz).
 
 ## Description
 ### Macroevolutionary modeling
