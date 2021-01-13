@@ -189,10 +189,11 @@ surfaceExtended <- function(bwd_surface, data, tree, error = NA, models = c('OUM
 
     #Fit models with OUwie and make summary of results
     for(i in 1:length(models)) {
+      algorithm <- ifelse(length(tree_ouwie$tip.label) > 500, 'three.point', 'invert')
       ouwie_result <- OUwie::OUwie(tree_ouwie, data_ouwie, model = gsub('Z', '', models[i]), simmap.tree = F,
                                    root.age = tree_ouwie$root.time, scaleHeight = F, root.station = F,
-                                   get.root.theta = estimate.theta[i], clade = NULL, mserr = mserr,
-                                   starting.vals = NULL, diagn = T, warn = F)
+                                   get.root.theta = estimate.theta[i], clade = NULL, mserr = mserr, shift.point = 0.5,
+                                   starting.vals = NULL, algorithm = algorithm, quiet = T, diagn = T, warn = F)
 
       model_name <- paste(number_of_regimes, models[i], sep = '_')
       assign(model_name, ouwie_result)
@@ -217,13 +218,10 @@ surfaceExtended <- function(bwd_surface, data, tree, error = NA, models = c('OUM
     } else {
       assign(paste0('best_', models[i]),
              get(as.character(model_results[which(model_results[,'AICC'] == min(model_results[,'AICC'])),'model'])))
-      if(grepl('Z', models[i])) {
-        cat('For', models[i], 'a', (nrow(get(paste0('best_', models[i]))$theta)-1),
+
+      cat('For', models[i], 'a', substr(as.character(model_results[1,1]), 1, 1),
             'regime solution was the best, with AICc =', get(paste0('best_', models[i]))$AICc, '\n')
-      } else {
-        cat('For', models[i], 'a', nrow(get(paste0('best_', models[i]))$theta),
-            'regime solution was the best, with AICc =', get(paste0('best_', models[i]))$AICc, '\n')
-      }
+
       if(exists('to_output')) {
         to_output <- c(to_output, paste0('best_', models[i]))
       } else {
@@ -232,25 +230,25 @@ surfaceExtended <- function(bwd_surface, data, tree, error = NA, models = c('OUM
     }
   }
 
-  if(nrow(model_results) > 0 && plot) extended_surfaceAICPlot(ext_surface = bwd_surface2,
+  if(exists('to_output') > 0 && plot) extended_surfaceAICPlot(ext_surface = bwd_surface2,
                                                               summary = summary,
                                                               fwd_surface = fwd_surface)
 
   #Return the extended surface object, a summary of results and the best model of each type
-  if(length(to_output) == 1) {
-    result <- list(bwd_surface2, summary, get(to_output[1]))
-    names(result) <- c('ext_surface', 'summary', to_output[1])
-    return(result)
-  } else {
-    if(length(to_output) > 1) {
+  if(exists('to_output')) {
+    if(length(to_output) == 1) {
+      result <- list(bwd_surface2, summary, get(to_output[1]))
+      names(result) <- c('ext_surface', 'summary', to_output[1])
+      return(result)
+    } else {
       result <- list(bwd_surface2, summary)
       for(i in 1:length(to_output)) {
         result[[length(result)+1]] <- get(to_output[i])
       }
       names(result) <- c('ext_surface', 'summary', to_output)
       return(result)
-    } else {
-      cat('No reliable solution was found. The result of the backwards phase of SURFACE remains the best OUM model.', '\n')
     }
+  } else {
+    cat('No reliable solution was found. The result of the backwards phase of SURFACE remains the best OUM model.', '\n')
   }
 }
