@@ -26,7 +26,7 @@ extendedSurface provides an easy interface between surface and OUwie, so that pa
 Although extendedSurface was developed to explore adaptive landscapes in non-ultrametric trees, as these attain higher levels of model accuracy than topologies that sample only extant lineages (Ho & Ané 2014), the SURFACE algorithm is still routinely employed to study macroevolutionary dynamics of living clades. Preliminary analyses show that extendedSurface is also able to find better fitting models when using trees containing only extant lineages (Fig. 2). 
 
 ![other_clades](https://github.com/mongiardino/extendedSurface/blob/master/images/other_clades.jpg)
-**Fig. 2:** extendedSurface is able to improve upon the fit of multi-OU models supported by SURFACE, even when no fossils tips are sampled. The five clades explored  represent different radiations of vertebrate clades within Australia. Black dots show the progression of the forward and backward phase of SURFACE, while white shapes show models explored using extendedSurface. Even in the absense of fossil terminals, extendedSurface finds better fitting multi-OU models for all five clades, often times including as few as half of the number of regimes supported by SURFACE.
+**Fig. 2:** extendedSurface is able to improve upon the fit of multi-OU models supported by SURFACE, even when no fossils tips are sampled. The five clades explored  represent different radiations of vertebrate clades within Australia. Black dots show the progression of the forward and backward phase of SURFACE, while white shapes show models explored using extendedSurface. Even in the absense of fossil terminals, extendedSurface finds better fitting multi-OU models for all five clades, often times including as few as half of the number of regimes supported by SURFACE. Datasets are from Brennan & Keogh (2018).
 
 
 ### Visualizing discrete trait evolution
@@ -67,7 +67,9 @@ Beaulieu J.M., Jhuwueng D.‐C., Boettiger C., O'Meara B.C. 2012. Modeling stabi
 
 Benson R.B.J., Hunt G., Carrano M.T., Campione N. (2018), Cope's rule and the adaptive landscape of dinosaur body size evolution. Palaeontology, 61:13-48.
 
-Bollback, J.P. 2006. Stochastic character mapping of discrete traits on phylogenies. BMC Bioinformatics, 7:88.
+Bollback J.P. 2006. Stochastic character mapping of discrete traits on phylogenies. BMC Bioinformatics, 7:88.
+
+Brennan I.G., Keogh J.S. 2018. Miocene biome turnover drove conservative body size evolution across Australian vertebrates. Proceedings of the Royal Society B 285:20181474.
 
 Ho L.S.T, Ané C. 2014. Intrinsic inference difficulties for trait evolution with Ornstein‐Uhlenbeck models. Methods in Ecology & Evolution, 5:1133–1146.
 
