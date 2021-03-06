@@ -41,7 +41,7 @@ Summarizing and visualizing this data is handled by function plot_ttt (a plot is
 **Fig. 3:** Example of visualization approach. **A.** The optimal OUMVAZ model for the dataset included in this package is coded as a discrete trait and its evolution explored using replicates of stochastic character mapping. **B.** In the top plot, the number of active regimes through time in 100 replicates are summarized. Grey dots show possible outcomes and their color scales with their relative frequency (darker = more likely). In the bottom plot, the rate at which regimes are accumulating through time (i.e., the difference between the birth rate and the death rate) is plotted. Blue (top) and red (bottom) lines are median values smoothed using GAM, confidence intervals span 80% of replicates.
 
 ## Usage
-The package comes with exemplary data that includes a time-calibrated phylogeny of echinoids, body size and measurement errors for all tips, as well as the outputs of running the forward and backwards phases of Surface on this data.
+The package comes with exemplary data that includes a time-calibrated phylogeny of echinoids, body size and measurement errors for all tips, as well as the outputs of running the forward and backwards phases of SURFACE on this data.
 ```R
 data(echinoid_data)
 OUmodels <- surfaceExtended(bwd_surface = echinoid_data$bwd_surface,
