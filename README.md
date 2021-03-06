@@ -21,14 +21,14 @@ extendedSurface provides an easy interface between surface and OUwie, so that pa
 
 ![model_comparison](https://github.com/mongiardino/extendedSurface/blob/master/images/model_comparison.jpg)
 **Fig. 1:** Comparison of the relative fit of multi Ornstein-Uhlenbeck models obtained for a comparative dataset of echinoid body size using Surface and extendedSurface (highlighted in yellow). extendedSurface explores suboptimal OUM models and uses them as starting points for the optimization of different &alpha; and &sigma;<sup>2</sup> parameters for each regime. In this case, exploration of a suboptimal 4-peak OUM model (&Delta;AICc = 5.76 with respect to the optimal 7-peak OUM model returned by Surface) allows the method to find an much better 4-peak OUMVAZ (&Delta;AICc = -27.81). Modified from Mongiardino Koch & Thompson (2020).
-
-
+<br/>
+<br/>
 Although extendedSurface was developed to explore adaptive landscapes in non-ultrametric trees, as these attain higher levels of model accuracy than topologies that sample only extant lineages (Ho & Ané 2014), the SURFACE algorithm is still routinely employed to study macroevolutionary dynamics of living clades. Preliminary analyses show that extendedSurface is also able to find better fitting models when using trees containing only extant lineages (Fig. 2). 
 
 ![other_clades2](https://github.com/mongiardino/extendedSurface/blob/master/images/other_clades2.jpg)
 **Fig. 2:** extendedSurface is able to improve upon the fit of multi-OU models supported by SURFACE, even when no fossils tips are sampled. The five clades explored  represent different radiations of vertebrate clades within Australia. Black dots show the progression of the forward and backward phase of SURFACE, while white shapes show models explored using extendedSurface. Even in the absense of fossil terminals, extendedSurface finds better fitting multi-OU models for all five clades, often times including as few as half of the number of regimes supported by SURFACE. Datasets are from Brennan & Keogh (2018).
-
-
+<br/>
+<br/>
 ### Visualizing discrete trait evolution
 This package has been extended to provide novel ways of summarizing and visualizing the evolution of discrete traits in phylogenies. Although these approaches were designed to capture certain aspects of the evolution of selective regimes, they can be useful to capture the temporal dynamics of discrete traits in general (although this depends on the type of trait and the goals of the researcher). For similar types of plots see [this](http://blog.phytools.org/2017/11/visualizing-rate-of-change-in-discrete.html) entry of the phytools blog by Liam Revell.
 
