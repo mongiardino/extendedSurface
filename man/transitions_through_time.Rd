@@ -46,7 +46,9 @@ how to plot these results is attained by providing the output to the function
 \code{\link{plot_ttt}}.
 }
 \references{
-Mongiardino Koch N., Thompson J.R. A Total-Evidence Dated Phylogeny of Echinoids and the Evolution of Body Size across Adaptive Landscape. bioRxiv 2020.02.13.947796, doi.org/10.1101/2020.02.13.947796.
+Mongiardino Koch N. 2021. Exploring adaptive landscapes across deep time:
+  A case study using echinoid body size. Evolution,
+  https://doi.org/10.1111/evo.14219.
 }
 \seealso{
 For details on stochastic character mapping visit

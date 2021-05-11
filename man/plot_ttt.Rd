@@ -70,7 +70,9 @@ number of smoothing functions used, nonsensical results can be obtained. Some
 tuning might be necessary to correctly depict trends in the data.
 }
 \references{
-Mongiardino Koch N., Thompson J.R. A Total-Evidence Dated Phylogeny of Echinoids and the Evolution of Body Size across Adaptive Landscape. bioRxiv 2020.02.13.947796, doi.org/10.1101/2020.02.13.947796.
+Mongiardino Koch N. 2021. Exploring adaptive landscapes across deep time:
+  A case study using echinoid body size. Evolution,
+  https://doi.org/10.1111/evo.14219.
 }
 \seealso{
 \code{\link{transitions_through_time}}
