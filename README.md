@@ -60,7 +60,7 @@ ttt <- transitions_through_time(echinoid_data$tree, regimes, repl = 100, model =
 ## Author
 Nicolás Mongiardino Koch. Department of Earth & Planetary Sciences, Yale University.
 
-**_Citation:_** Mongiardino Koch, N & Thompson, J. R. 2020. A Total-Evidence Dated Phylogeny of Echinoids and the Evolution of Body Size across Adaptive Landscape. bioRxiv, https://doi.org/10.1101/2020.02.13.947796.
+**_Citation:_** Mongiardino Koch N. 2021. Exploring adaptive landscapes across deep time: A case study using echinoid body size. Evolution, https://doi.org/10.1111/evo.14219.
 
 ## References
 Beaulieu J.M., Jhuwueng D.‐C., Boettiger C., O'Meara B.C. 2012. Modeling stabilizing selection: expanding the Ornstein–Uhlenbeck model of adaptive evolution. Evolution, 66:2369–2383.
