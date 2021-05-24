@@ -82,7 +82,7 @@ plot_ttt <- function(ttt, interval = NA, window_size = NA, CI = 80, trim = T,
     #get one replicate at a time and sort events by their time of occurrence
     data <- ttt[which(ttt$Repl == i),]
     times <- sort(c(data[,1],data[,2]), decreasing = T)
-    times <- times[-which(times == 0)]
+    if(any(times == 0)) times <- times[-which(times == 0)]
 
     #place to store how the numbe of active regimes changed with each event
     n_optima <- rep(1, length(times))
