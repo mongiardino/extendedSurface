@@ -119,7 +119,7 @@ surfaceExtended <- function(bwd_surface, data, tree, error = NA, models = c('OUM
 
   ###Data
   if(class(data) != 'data.frame') data <- data.frame(data)
-  if(any(!rownames(data) %in% tree$tip.label)) data <- data[-which(!rownames(data) %in% tree$tip.label),]
+  if(any(!rownames(data) %in% tree$tip.label)) data <- data[-which(!rownames(data) %in% tree$tip.label),,drop=FALSE]
 
   ###Tree
   if(length(tree$tip.label) != dim(data)[1]) {
